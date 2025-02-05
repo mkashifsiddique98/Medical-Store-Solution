@@ -11,7 +11,7 @@
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d"
   },
-  "author": "ANAS AHMAD ISMAIL",
+  "author": "Muhammad Kashif Siddique",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
