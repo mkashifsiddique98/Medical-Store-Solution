@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+  color: rgba(103, 30, 51, 0.8);
+}
+.special_Heading {
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+  color: rgba(103, 30, 51, 0.8);
+}
+.hr_style {
+  width: 270px;
+  text-align: center;
+  margin-left: 512px;
+  margin-top: -30px;
+}
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+h3 {
+  padding: 1rem 0;
+}
+i {
+  padding-right: 0.2rem;
+}
+i:hover {
+  color: rgba(103, 30, 51, 0.8);
+  /* background-color: darkslategrey; */
+}
+
+/**  In Rating Component */
+.rating span {
+  margin: 0.15rem;
+}
+/*! id and other stuff like that (Add to Cart Button) */
+#button_special {
+  margin-top: 1rem;
+  width: 100%;
+}
+#button_special:hover {
+  background-color: rgba(103, 30, 51, 0.8);
+  color: white;
+}
+
+/* **** Login Style */
+.center_div {
+  position: relative;
+}
+.login_style {
+  padding-top: 4rem;
+  background-image: linear-gradient(
+      135deg,
+      rgba(53, 92, 125, 0.8),
+      rgba(108, 91, 123, 0.8),
+      rgba(192, 108, 132, 0.8)
+    ),
+    url("../../uploads/login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 60%;
+  position: absolute;
+  left: 16%;
+  top: 60%;
+  transform: translate(3%, 10%);
+}
+/* ******* Register */
+.register_style {
+  background-image: linear-gradient(
+      135deg,
+      rgba(53, 92, 125, 0.8),
+      rgba(108, 91, 123, 0.8),
+      rgba(192, 108, 132, 0.8)
+    ),
+    url("../../uploads/register.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  width: 60%;
+  position: absolute;
+  left: 16%;
+  top: 60%;
+  transform: translate(3%, 10%);
+}
+/* **** ===========   Carousel  =========== */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+.carousel-caption h2 {
+  color: #fff;
+}
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+}
+.carousel a {
+  margin: 0 auto;
+}
+
+.bg_carousel {
+  background-image: linear-gradient(
+      135deg,
+      rgba(53, 92, 125, 0.8),
+      rgba(108, 91, 123, 0.8),
+      rgba(192, 108, 132, 0.8)
+    ),
+    url("../../uploads/carousel_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/** =========  product Card Styling   ============ */
+.product_card_style {
+  background-image: linear-gradient(
+    135deg,
+    rgba(7, 18, 28, 0.8),
+    rgba(48, 43, 48, 0.8)
+  );
+}
+.product_card_strong {
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+/** ====================================  */
+.whatsApp_button {
+  margin-left: 22.8rem;
+  margin-top: 3rem;
+  width: 40%;
+  background-color: #25d366;
+}
+
+/* User Profile */
+/*  */
+.heading {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.img-holder {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 3px black solid;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+#input[type="file"] {
+  display: none;
+}
+.label {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.image-upload {
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+}
+/* *** Doctor Consultation */
+.consult_card_bg {
+  background-image: linear-gradient(
+      135deg,
+      rgba(53, 92, 125, 0.8),
+      rgba(108, 91, 123, 0.8),
+      rgba(192, 108, 132, 0.8)
+    ),
+    url("../../uploads/doctor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.consult_info {
+  background-color: antiquewhite;
+  text-align: center;
+  height: auto;
+  padding-top: 25px;
+  width: 100%;
+  margin-top: 90px;
+}
+/* ********** Lab Style */
+.lab_info {
+  background-color: rgb(211, 211, 211);
+  margin-top: 70px;
+  padding: 20px;
+  text-align: center;
+}
+/****  COmpounding Medicine*/
+.comp_med_style {
+  background-color: rgba(161, 205, 215, 0.542);
+  text-align: center;
+  height: auto;
+  padding-top: 30px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+/* *** Profile_Order Style */
+.profile_order_style {
+  background-image: url("../../uploads/profile_order.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+/* **** Profile Update */
+.profile_Update_style {
+  height: auto;
+  border: 2px solid rgb(157, 153, 127);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+      135deg,
+      rgba(53, 92, 125, 0.8),
+      rgba(108, 91, 123, 0.8),
+      rgba(192, 108, 132, 0.8)
+    ),
+    url("../../uploads/price_profile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*** Footer */
+footer {
+  background-color: rgb(208, 204, 204);
+  height: 10vh;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer_text {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
