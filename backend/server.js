@@ -9,7 +9,7 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 // * importing colors to use different colors to show the console attractive
 import colors from 'colors'
-
+import cors from 'cors';
 // * Importing Routes files
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
@@ -57,11 +57,16 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 app.use(notFound)
 app.use(errorHandler)
 
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://medical-store-solution-live.vercel.app/'], // Add frontend URLs
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // Allow cookies if needed
+}));
 // !========================================
 
 // ! using environment variable i.e. PORT & NODE_ENV
 const PORT = process.env.PORT || 5000
-
+app.use(express.json());
 // * Listening the App at the specific port
 app.listen(
   PORT,
