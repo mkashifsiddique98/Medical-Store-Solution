@@ -28,7 +28,7 @@ import {
   ORDER_DELIVER_REQUEST,
   ORDER_DELIVER_SUCCESS,
 } from '../constants/orderConstants'
-
+import {API_BASE_URL} from "../../src/config"
 //?    =======  1)  Action for Order Create Reducer =============
 export const createOrder = order => async (dispatch, getState) => {
   try {
@@ -47,7 +47,7 @@ export const createOrder = order => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.post('/api/orders', order, config)
+    const { data } = await axios.post(`${API_BASE_URL}/api/orders`, order, config)
     //! Create Order Success
     dispatch({
       type: ORDER_CREATE_SUCCESS,
@@ -82,7 +82,7 @@ export const getOrderDetails = id => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get(`/api/orders/${id}`, config)
+    const { data } = await axios.get(`${API_BASE_URL}/api/orders/${id}`, config)
     //!   Order Details Success
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
@@ -117,7 +117,7 @@ export const payOrder = order => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.put(`/api/orders/${order._id}/pay`, {}, config)
+    const { data } = await axios.put(`${API_BASE_URL}/api/orders/${order._id}/pay`, {}, config)
     //! Order PAY Success
     dispatch({
       type: ORDER_PAY_SUCCESS,
@@ -152,7 +152,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get('/api/orders/myorders', config)
+    const { data } = await axios.get(`${API_BASE_URL}/api/orders/myorders`, config)
     //! My List Order Success
     dispatch({
       type: ORDER_LIST_MY_SUCCESS,
@@ -187,7 +187,7 @@ export const listOrders = () => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get('/api/orders', config)
+    const { data } = await axios.get(`${API_BASE_URL}/api/orders`, config)
     //! List Order Success
     dispatch({
       type: ORDER_LIST_SUCCESS,
@@ -223,7 +223,7 @@ export const deliverOrder = order => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/orders/${order._id}/deliver`,
+      `${API_BASE_URL}/api/orders/${order._id}/deliver`,
       {},
       config
     )

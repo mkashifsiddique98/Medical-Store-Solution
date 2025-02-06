@@ -7,6 +7,7 @@ import {
 
 //* Impoprted Libraries
 import axios from 'axios'
+import {API_BASE_URL} from "../../src/config"
 
 // ? =============== 1) Action for Save Compounding Medicine Reducer ====================
 export const saveCompoundingMedicineAction =
@@ -31,7 +32,7 @@ export const saveCompoundingMedicineAction =
       }
 
       const { data } = await axios.post(
-        '/api/compounding-medicine',
+        `${API_BASE_URL}/api/compounding-medicine`,
         { name, email, image, message, address },
         config
       )
