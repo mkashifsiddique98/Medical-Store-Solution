@@ -58,7 +58,7 @@ app.use(notFound)
 app.use(errorHandler)
 
 app.use(cors({
-  origin: [ 'https://medical-store-solution-live.vercel.app/','http://localhost:3000'], // Add frontend URLs
+  origin: [ 'https://medical-store-solution-live.vercel.app','http://localhost:3000'], // Add frontend URLs
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true // Allow cookies if needed
 }));
