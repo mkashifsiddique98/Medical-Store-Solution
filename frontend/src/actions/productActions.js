@@ -41,7 +41,7 @@ export const listProducts =
       dispatch({ type: PRODUCT_LIST_REQUEST })
 
       const { data } = await axios.get(
-        `${API_BASE_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `${API_BASE_URL}/api/products?keyword=${keyword}&pageNumber=${pageNumber}`,{ withCredentials: true }
       )
      console.log("API_BASE_URL",API_BASE_URL)
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
@@ -61,7 +61,7 @@ export const listProductDetails = id => async dispatch => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-    const { data } = await axios.get(`${API_BASE_URL}/api/products/${id}`)
+    const { data } = await axios.get(`${API_BASE_URL}/api/products/${id}`,{ withCredentials: true })
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
