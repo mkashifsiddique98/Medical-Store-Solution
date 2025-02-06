@@ -6,9 +6,6 @@
 The **Medical Store Solution** is a software system designed to streamline and manage various aspects of running a medical store or pharmacy. It aims to provide an efficient and user-friendly platform for managing inventory, tracking sales, and simplifying the day-to-day operations of a medical store.
 
 This README serves as an introduction to the project, its features, installation instructions, and usage guidelines.
-
-# Project Name
-
 ## Home Page
 - **URL**: `/`
 - Key Features:
